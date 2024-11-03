@@ -1,10 +1,72 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import Badge from "../components/Badge.astro";
+import GitHubIcon from "../components/Icons/GitHub.astro";
+import LinkedInIcon from "../components/Icons/LinkedIn.astro";
+import EmailIcon from "../components/Icons/Email.astro";
+import BriefCaseIcon from "../components/Icons/BriefCase.astro";
+import SocialPill from "../components/SocialPill.astro";
+import Experience from "../components/Experience.astro";
 ---
 
-<Layout title="portfolio">
+<Layout 
+	title="Portfolio de Guille - Desarrollador y Programar Web FullStack / Frond y BackEnd"
+	description="Desarrollador Web FullStack, especializado en crear aplicaciones únicas. Desarrollador Web FullStack, especializado en crear aplicaciones únicas"
+	>
+
 	<main>
-		
+		<!-- Presentation -->
+		<SectionContainer>
+			<img class="rounded-full size-12" src="none" alt="Guille photo" />
+			<h1 class="text-5xl font-bold flex flex-row gap-x-4 pb-10">
+				Hey, soy Guille
+				<a
+					href="https://linkedin.com/in/ghuamano"
+					target="_blank"
+					rel="noopener"
+					class="flex justify-center items-center"
+				>
+					<Badge>Disponible para trabajar</Badge></a
+				>
+			</h1>
+			<h2 class="text-2xl text-wrap">
+				Ingeniero de profesión, programador por vocación. 
+				<span class="text-yellow-200/90">(Web designer y desarrollador FullStack)</span>. 
+				Actualemente con base en Rimini, Italia 🇮🇹. Especializado en
+				crear aplicaciones únicas.
+			</h2>
+
+			<div class="flex gap-x-2 my-8">
+				<SocialPill href="https://www.linkedin.com/in/ghuamano/">
+					<LinkedInIcon class="size-6"/>
+					LinkedIn
+				</SocialPill>
+
+				<SocialPill href="https://whttps://github.com/ghuamano">
+					<GitHubIcon class="size-6"/>
+					GitHub
+				</SocialPill>
+				
+				<SocialPill href="https://whttps://github.com/ghuamano">
+					<EmailIcon class="size-6"/>
+					g.huaman.o@gmail.com
+				</SocialPill>
+
+			</div>
+				
+		</SectionContainer>
+
+		<!-- Experience -->
+		<SectionContainer>	
+			<h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+				<BriefCaseIcon class="size-7"/>
+				Experiencia laboral
+			</h2>
+			<Experience/>
+		</SectionContainer>
+
+
 	</main>
 </Layout>

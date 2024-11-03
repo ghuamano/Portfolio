@@ -1,0 +1,47 @@
+---
+import { date } from "astro:schema"
+import ExperienceItem from "./ExperienceItem.astro"
+import type { ACTION_ERROR_CODES } from "astro:actions"
+
+const EXPERIENCIE = [
+    {
+        date: 'Febrero 2022',
+        title: 'Applicaion con tailwind', 
+        description: 'lfqfev feewcwd ewenfwenfwe wfwefwefwe lowrem werwerewrmiwefwe ewfwefwef fwefew ewfwef wefwef ',
+        link: '#',
+
+    },
+    {
+        date: 'Marzo 2022',
+        title: 'Applicaion con tailwind', 
+        description: 'lfqfev feewcwd ewenfwenfwe wfwefwefwe lowrem werwerewrmiwefwe ewfwefwef fwefew ewfwef wefwef ',
+        link: '#',
+
+    },
+    {
+        date: 'Abril 2025',
+        title: 'Applicaion con tailwind', 
+        description: 'lfqfev feewcwd ewenfwenfwe wfwefwefwe lowrem werwerewrmiwefwe ewfwefwef fwefew ewfwef wefwef ',
+        link: '#',
+
+    },
+    {
+        date: 'Mayo 2022',
+        title: 'Applicaion con tailwind', 
+        description: 'lfqfev feewcwd ewenfwenfwe wfwefwefwe lowrem werwerewrmiwefwe ewfwefwef fwefew ewfwef wefwef ',
+        link: '#',
+
+    }
+]  
+---
+<ol class="relative border-s border-gray-200 dark:border-gray-700"> 
+    {
+        EXPERIENCIE.map(experiencie => (
+            <li class="mb-10 ms-4">
+                <ExperienceItem {...experiencie} />
+            </li>
+        ))
+    }                 
+
+</ol>
+
