@@ -1,9 +1,24 @@
-<header class=" container flex justify-center align-center py-5 w-full mx-auto mb-44">
+---
+import LanguageSelector from "./LanguageSelector.astro";
+import { getContent } from "../utils/translations";
+// Obtenemos el idioma actual usando la función nativa de Astro
+const currentLocale = Astro.currentLocale || "es";
+const content = getContent(currentLocale);
+---
 
-    <nav class=" flex flex-row gap-x-10 list-none opacity-90">
-        <li><a href="">Home</a></li>
-        <li><a href="">About</a></li>
-        <li><a href="">Projects</a></li>
-        <li><a href="">Contact</a></li>
-    </nav>  
+<header
+    class="container flex justify-center align-center py-5 w-full mx-auto mb-44"
+>
+    <nav class="flex gap-x-10 list-none opacity-90">
+        <ul class="flex gap-x-10">
+            <li><a href="">{content.nav.home}</a></li>
+            <li><a href="">{content.nav.about}</a></li>
+            <li><a href="">{content.nav.projects}</a></li>
+            <li><a href="">{content.nav.contact}</a></li>
+        </ul>
+
+        
+    </nav>
+
+    <LanguageSelector />
 </header>

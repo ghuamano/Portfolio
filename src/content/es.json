@@ -1,0 +1,23 @@
+{
+    "title": "Portfolio de Guille",
+    "description": "Desarrollador y Programar Web FullStack / Front y BackEnd",
+    "metaDescription": "Desarrollador Web FullStack, especializado en crear aplicaciones únicas.",
+    "greeting": "Hey, soy Guille",
+    "availability": "Disponible para trabajar",
+    "bio": {
+        "profession": "Ingeniero de profesión, programador por vocación.",
+        "role": "Web designer y desarrollador FullStack",
+        "location": "Actualmente con base en Rimini, Italia 🇮🇹.",
+        "specialty": "Especializado en crear aplicaciones únicas."
+    },
+    "sections": {
+        "experience": "Experiencia laboral",
+        "contact": "Contacto"
+    },
+    "nav": {
+        "home": "Inicio",
+        "about": "Sobre mí",
+        "projects": "Proyectos",
+        "contact": "Contacto"
+    }
+}

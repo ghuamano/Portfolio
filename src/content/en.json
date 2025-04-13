@@ -1,0 +1,23 @@
+{
+    "title": "Guille's Portfolio",
+    "description": "Full Stack Web Developer / Front and Back End",
+    "metaDescription": "Full Stack Web Developer specialized in creating unique applications.",
+    "greeting": "Hey, I'm Guille",
+    "availability": "Available for hire",
+    "bio": {
+        "profession": "Engineer by profession, programmer by vocation.",
+        "role": "Web designer and FullStack developer",
+        "location": "Currently based in Rimini, Italy 🇮🇹.",
+        "specialty": "Specialized in creating unique applications."
+    },
+    "sections": {
+        "experience": "Work Experience",
+        "contact": "Contact"
+    },
+    "nav": {
+        "home": "Home",
+        "about": "About",
+        "projects": "Projects",
+        "contact": "Contact"
+    }
+}

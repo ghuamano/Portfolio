@@ -1,3 +1,9 @@
 {
-  "extends": "astro/tsconfigs/strict"
+  "extends": "astro/tsconfigs/strict",
+  "compilerOptions": {
+    // ...other options
+    "paths": {
+      "astro-i18next": ["./node_modules/astro-i18next/dist/types/index.d.ts"]
+    }
+  }
 }

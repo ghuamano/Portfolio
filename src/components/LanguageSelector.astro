@@ -1,0 +1,127 @@
+---
+// Obtenemos la URL actual y el idioma actual
+const currentLocale = Astro.currentLocale || "es";
+
+// Función para generar URLs traducidas
+function getLocalizedPath(targetLocale: string): string {
+    // Si es el idioma predeterminado, vamos a la raíz
+    if (targetLocale === "es") {
+        return "/";
+    }
+
+    // Para otros idiomas, añadimos el prefijo
+    return `/${targetLocale}/`;
+}
+---
+
+<div class="relative inline-block text-left justify-self-end">
+    <div>
+        <button
+            type="button"
+            class="dropdown-button inline-flex w-full justify-center gap-x-1.5 rounded-md px-3 py-2 text-sm font-semibold text-white shadow-xs ring-1 ring-gray-300 ring-inset"
+            id="menu-button"
+            aria-expanded="true"
+            aria-haspopup="true"
+        >
+            {
+                currentLocale === "es"
+                    ? "🇪🇸 ES"
+                    : currentLocale === "en"
+                    ? "🇬🇧 EN"
+                    : currentLocale === "it"
+                        ? "🇮🇹 IT"
+                        : "🇪🇸 ES"
+            }
+        </button>
+        <div
+            class="dropdown-content absolute right-0 z-10 mt-2 w-52 origin-top-right rounded-md bg-violet-800 shadow-lg ring-1 ring-black/5 focus:outline-hidden"
+            role="menu"
+            aria-orientation="vertical"
+            aria-labelledby="menu-button"
+            tabindex="-1"
+        >
+            <div class="py-1" role="none">
+                <a
+                    href={getLocalizedPath("es")}
+                    class={currentLocale === "es" ? "active" : ""}
+                >
+                    🇪🇸 ES
+                </a>
+                <a
+                    href={getLocalizedPath("en")}
+                    class={currentLocale === "en" ? "active" : ""}
+                >
+                    🇬🇧 EN
+                </a>
+                <a
+                    href={getLocalizedPath("it")}
+                    class={currentLocale === "it" ? "active" : ""}
+                >
+                    🇮🇹 IT
+                </a>
+            
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const dropdownButton = document.querySelector(".dropdown-button");
+            const dropdownContent = document.querySelector(".dropdown-content");
+
+            if (dropdownButton && dropdownContent) {
+                dropdownButton.addEventListener("click", () => {
+                    dropdownContent.classList.toggle("show");
+                });
+
+                window.addEventListener("click", (event) => {
+                    if (
+                        event.target instanceof Element &&
+                        !event.target.matches(".dropdown-button")
+                    ) {
+                        if (dropdownContent.classList.contains("show")) {
+                            dropdownContent.classList.remove("show");
+                        }
+                    }
+                });
+            }
+        });
+    </script>
+
+    <style>
+        .language-switcher {
+            display: flex;
+            gap: 1rem;
+        }
+        .language-switcher a {
+            padding: 0.3rem 0.6rem;
+            border-radius: 0.25rem;
+            text-decoration: none;
+        }
+        .language-switcher a.active {
+            font-weight: bold;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        /* Hide dropdown by default */
+        .dropdown-content {
+            display: none;
+        }
+        
+        /* Show dropdown when active */
+        .dropdown-content.show {
+            display: block;
+        }
+        
+        /* Style the links in dropdown */
+        .dropdown-content a {
+            display: block;
+            padding: 0.5rem 1rem;
+            color: #f4efef;
+        }
+        
+        .dropdown-content a:hover {
+            background-color: #f5f5f5;
+        }
+    </style>
+</div>
