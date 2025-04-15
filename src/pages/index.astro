@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
+import Footer from "../components/Footer.astro";
 import SectionContainer from "../components/SectionContainer.astro";
 import Badge from "../components/Badge.astro";
 import GitHubIcon from "../components/Icons/GitHub.astro";
@@ -15,7 +16,7 @@ import LanguageSelector from "../components/LanguageSelector.astro";
 import { getContent } from "../utils/translations";
 
 // Obtenemos el idioma actual usando la función nativa de Astro
-const currentLocale = Astro.currentLocale || 'es';
+const currentLocale = Astro.currentLocale || "es";
 const content = getContent(currentLocale);
 ---
 
@@ -26,13 +27,13 @@ const content = getContent(currentLocale);
     <main>
         <!-- Selector de idioma -->
         <!-- <div class="flex justify-end pt-4 px-4"> -->
-            <!-- <LanguageSelector /> -->
+        <!-- <LanguageSelector /> -->
         <!-- </div> -->
-        
+
         <!-- Presentation -->
-        <SectionContainer>
-            <img class="rounded-full size-12" src="none" alt="Guille photo" />
-            <h1 class="text-5xl font-bold flex flex-row gap-x-4 pb-10">
+        <SectionContainer id="#">
+            <img class="rounded-full size-16" src="/public/photoProfilo.png" alt="Guille photo" />
+            <h1 class="text-5xl font-bold flex flex-row gap-x-4 pb-1">
                 {content.greeting}
                 <a
                     href="https://linkedin.com/in/ghuamano"
@@ -43,13 +44,19 @@ const content = getContent(currentLocale);
                     <Badge>{content.availability}</Badge></a
                 >
             </h1>
-            <h2 class="text-2xl text-wrap">
-                {content.bio.profession}
-                <span class="text-yellow-200/90">({content.bio.role})</span>.
-                {content.bio.location} {content.bio.specialty}
-            </h2>
+            <h5 class="text-xl flex flex-row pb-10">
+                <span class="text-yellow-200/90">{content.bio.role}</span>
+            </h5>
 
-            <div class="flex gap-x-2 my-8">
+            <h3 class="text-2xl text-wrap mb-5">
+                {content.bio.profession}
+                <span class="text-yellow-200/90">{content.bio.skills}</span>
+            </h3>
+            <h3 class="text-2xl text-wrap">
+                {content.bio.specialty}
+            </h3>
+
+            <div class="flex gap-x-4 my-8" id="contact">
                 <SocialPill href="https://www.linkedin.com/in/ghuamano/">
                     <LinkedInIcon class="size-6" />
                     LinkedIn
@@ -67,13 +74,44 @@ const content = getContent(currentLocale);
             </div>
         </SectionContainer>
 
+        <Footer />
+
         <!-- Experience -->
-        <SectionContainer>
+
+        <section id="experience">
+            <SectionContainer>
+                <h2
+                    class="text-2xl font-semibold mb-6 flex gap-x-3 items-center"
+                >
+                    <BriefCaseIcon class="size-7" />
+                    {content.sections.experience}
+                </h2>
+                <Experience />
+            </SectionContainer>
+        </section>
+
+        <!-- Projects -->
+        <SectionContainer id="projects">
             <h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
                 <BriefCaseIcon class="size-7" />
-                {content.sections.experience}
             </h2>
-            <Experience />
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <Card
+                    title="Project 1"
+                    body="Description of project 1"
+                    href="#"
+                />
+                <Card
+                    title="Project 2"
+                    body="Description of project 2"
+                    href="#"
+                />
+                <Card
+                    title="Project 3"
+                    body="Description of project 3"
+                    href="#"
+                />
+            </div>
         </SectionContainer>
     </main>
 </Layout>

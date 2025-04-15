@@ -1,14 +1,15 @@
 {
-    "title": "Portfolio di Guille",
+    "title": "Portfolio di Guille - Sviluppatore e Programmatore Web FullStack",
     "description": "Sviluppatore Web FullStack / Front e Back End",
-    "metaDescription": "Sviluppatore Web FullStack, specializzato nella creazione di applicazioni uniche.",
+    "metaDescription": "Guillermo Huaman, uno Sviluppatore Web FullStack specializzato in backEnd e frontEnd, con esperienza nella creazione di applicazioni e soluzioni uniche",
     "greeting": "Ciao, sono Guille",
-    "availability": "Disponibile per lavoro",
+    "availability": "Alla ricerca di nuove sfide",
     "bio": {
-        "profession": "Ingegnere di professione, programmatore per vocazione.",
-        "role": "Web designer e sviluppatore FullStack",
-        "location": "Attualmente basato a Rimini, Italia 🇮🇹.",
-        "specialty": "Specializzato nella creazione di applicazioni uniche."
+        "profession": "🎓 Ingegnere industriale diventato appassionato di codice, con una passione incontenibile per lo sviluppo web. Dopo essermi tuffato in un bootcamp di sviluppo full-stack, ho acquisito ",
+        "role": "FullStack Web Developer",
+        "skills": "competenze in PHP, Laravel, MySQL, JavaScript, HTML, CSS, Bootstrap, Tailwind, Git e GitHub.",
+        "location": "Currently based in Rimini, Italy 🇮🇹.",
+        "specialty": "🚀 Determinato a fare il salto nello sviluppo software, metto a disposizione un mix di abilità tecniche e competenze manageriali per contribuire al successo del tuo team di sviluppo. Costruiamo qualcosa di straordinario insieme! 💻✨"
     },
     "sections": {
         "experience": "Esperienza lavorativa",
@@ -17,7 +18,32 @@
     "nav": {
         "home": "Home",
         "about": "Chi sono",
+        "experience": "Esperienza",
         "projects": "Progetti",
         "contact": "Contatto"
+    },
+    "experience1": {
+        "company": "Eudinamis",
+        "position": "Caporeparto Produzione",
+        "date": "2021 - Presente",
+        "description1":"Montaggio e smontaggio di macchinari industriali.",
+        "description2": "Controllo dei processi produttivi e gestione della qualità.",
+        "description3": "Supporto amministrativo in traduzioni, pianificazione e controllo della produzione."
+    },
+    "experience2": {
+        "company": "Namaro SRL (Lima - Perù)",
+        "position": "Direttore Commerciale",
+        "date": "Aprile 2019 – Ottobre 2021",
+        "description1":"Definizione della strategia commerciale dell’azienda, con focus su marketing digitale e social media",
+        "description2": "Definizione della strategia commerciale dell’azienda, con focus su marketing digitale e social media",
+        "description3": "Progettazione di piani aziendali basati su analisi di mercato per l’espansione del business"
+    },
+    "experience3": {
+        "company": "Belia Trading Perú",
+        "position": "Esecutivo Commerciale ",
+        "date": "Aprile 2013 – Marzo 2019",
+        "description1":"Responsabile della concettualizzazione e dello sviluppo di prodotti commerciali, con un’attenzione costante al rapporto qualità-prezzo richiesto dal cliente, attraverso la ricerca strategica di fornitori, produttori e distributori a livello globale.",
+        "description2": "Sviluppo e gestione di relazioni commerciali a lungo termine con fornitori, mediante valutazioni e visite commerciali per operazioni su larga scala.",
+        "description3": "Elaborazione, esecuzione e monitoraggio del forecast annuale, con supporto continuo alla prospezione delle vendite mensili e annuali, in funzione del tipo e del ciclo di vita del prodotto o servizio."
     }
 }

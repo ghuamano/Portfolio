@@ -1,44 +1,46 @@
 ---
-import { date } from "astro:schema"
+import { date, string } from "astro:schema"
 import ExperienceItem from "./ExperienceItem.astro"
 import type { ACTION_ERROR_CODES } from "astro:actions"
 
-const EXPERIENCIE = [
+import LanguageSelector from "../components/LanguageSelector.astro";
+
+// Importamos la utilidad para traducciones
+import { getContent } from "../utils/translations";
+
+// Obtenemos el idioma actual usando la función nativa de Astro
+const currentLocale = Astro.currentLocale || 'es';
+const content = getContent(currentLocale);
+
+const EXPERIENCE = [
     {
-        date: 'Febrero 2022',
-        title: 'Applicaion con tailwind', 
-        description: 'lfqfev feewcwd ewenfwenfwe wfwefwefwe lowrem werwerewrmiwefwe ewfwefwef fwefew ewfwef wefwef ',
+        date: content.experience1.date,
+        title: content.experience1.position + ' | ' + content.experience1.company, 
+        description: content.experience1.description1,
         link: '#',
 
     },
     {
-        date: 'Marzo 2022',
-        title: 'Applicaion con tailwind', 
-        description: 'lfqfev feewcwd ewenfwenfwe wfwefwefwe lowrem werwerewrmiwefwe ewfwefwef fwefew ewfwef wefwef ',
+        date: content.experience2.date,
+        title: content.experience2.position + ' | ' + content.experience1.company, 
+        description: content.experience2.description1,
         link: '#',
 
     },
     {
-        date: 'Abril 2025',
-        title: 'Applicaion con tailwind', 
-        description: 'lfqfev feewcwd ewenfwenfwe wfwefwefwe lowrem werwerewrmiwefwe ewfwefwef fwefew ewfwef wefwef ',
-        link: '#',
-
-    },
-    {
-        date: 'Mayo 2022',
-        title: 'Applicaion con tailwind', 
-        description: 'lfqfev feewcwd ewenfwenfwe wfwefwefwe lowrem werwerewrmiwefwe ewfwefwef fwefew ewfwef wefwef ',
+        date: content.experience3.date,
+        title: content.experience3.position + ' | ' + content.experience1.company, 
+        description: content.experience3.description1,
         link: '#',
 
     }
 ]  
 ---
-<ol class="relative border-s border-gray-200 dark:border-gray-700"> 
+<ol class="relative border-s border-gray-200 ml-3"> 
     {
-        EXPERIENCIE.map(experiencie => (
+        EXPERIENCE.map(experience => (
             <li class="mb-10 ms-4">
-                <ExperienceItem {...experiencie} />
+                <ExperienceItem {...experience}/>
             </li>
         ))
     }                 

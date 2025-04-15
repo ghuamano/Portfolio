@@ -1,24 +1,65 @@
 ---
+export interface Props {
+    link?: string;
+}
+
 import LanguageSelector from "./LanguageSelector.astro";
 import { getContent } from "../utils/translations";
 // Obtenemos el idioma actual usando la función nativa de Astro
 const currentLocale = Astro.currentLocale || "es";
 const content = getContent(currentLocale);
+
 ---
 
-<header
-    class="container flex justify-center align-center py-5 w-full mx-auto mb-44"
->
-    <nav class="flex gap-x-10 list-none opacity-90">
-        <ul class="flex gap-x-10">
-            <li><a href="">{content.nav.home}</a></li>
-            <li><a href="">{content.nav.about}</a></li>
-            <li><a href="">{content.nav.projects}</a></li>
-            <li><a href="">{content.nav.contact}</a></li>
-        </ul>
-
+<header class="container flex py-5 w-full mx-auto mb-40">
+    <nav class="w-full flex justify-between items-center">
+        <div class="flex-1">
+            <!-- Empty div for balance -->
+        </div>
         
+        <!-- Desktop Menu -->
+        <ul class="hidden md:flex gap-x-10 list-none opacity-90">
+            <li><a href="#">{content.nav.home}</a></li>
+            <li><a href="#nav">{content.nav.about}</a></li>
+            <li><a href="#experience">{content.nav.experience}</a></li>
+            <li><a href="#projects">{content.nav.projects}</a></li>
+            <li><a href="#contact">{content.nav.contact}</a></li>
+        </ul>
+        
+        <!-- Mobile Hamburger Button -->
+        <button id="mobile-menu-button" class="md:hidden z-20">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+        </button>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="fixed inset-0 bg-black bg-opacity-80 z-10 flex-col items-center justify-center hidden">
+            <ul class="flex flex-col gap-y-6 text-center text-xl">
+                <li><a href="#">{content.nav.home}</a></li>
+                <li><a href="about-me">{content.nav.about}</a></li>
+                <li><a href="#experience">{content.nav.experience}</a></li>
+                <li><a href="#projects">{content.nav.projects}</a></li>
+                <li><a href="#contact">{content.nav.contact}</a></li>
+            </ul>
+        </div>
+        
+        <div class="flex-1 flex justify-end mx-auto pe-6">
+            <LanguageSelector />
+        </div>
     </nav>
 
-    <LanguageSelector />
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                    mobileMenu.classList.toggle('flex');
+                });
+            }
+        });
+    </script>
 </header>

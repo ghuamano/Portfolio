@@ -1,14 +1,15 @@
 {
-    "title": "Guille's Portfolio",
+    "title": "Guille's Portfolio - Full Stack Developer and Web Programmer",
     "description": "Full Stack Web Developer / Front and Back End",
-    "metaDescription": "Full Stack Web Developer specialized in creating unique applications.",
+    "metaDescription": "Guillermo Huaman, a FullStack Web Developer specialized in backEnd, with experience in creating unique applications and solutions",
     "greeting": "Hey, I'm Guille",
-    "availability": "Available for hire",
+    "availability": "Seeking new opportunities",
     "bio": {
-        "profession": "Engineer by profession, programmer by vocation.",
-        "role": "Web designer and FullStack developer",
+        "profession": "🎓 Industrial engineer turned code enthusiast with an unstoppable passion for web development. After diving headfirst into a full-stack web development bootcamp, I came out equipped with ",
+        "role": "FullStack Web Developer",
+        "skills": "skills in PHP, Laravel, MySQL, JavaScript, HTML, CSS, Bootstrap, Tailwind, Git, and GitHub.",
         "location": "Currently based in Rimini, Italy 🇮🇹.",
-        "specialty": "Specialized in creating unique applications."
+        "specialty": "🚀 Currently on a mission to break into the software development world, bringing a dynamic mix of technical chops and managerial superpowers to help your dev team shine. Let’s build something awesome together! 💻✨"
     },
     "sections": {
         "experience": "Work Experience",
@@ -17,7 +18,35 @@
     "nav": {
         "home": "Home",
         "about": "About",
+        "experience": "Experience",
         "projects": "Projects",
         "contact": "Contact"
+    },
+    "experience1": {
+        "company": "Eudinamis",
+        "position": "Production Department Manager",
+        "date": "2021 - Present",
+        "description1": "Assembly and disassembly of industrial machinery.",
+        "description2": "Control of production processes and quality management.",
+        "description3": "Administrative support in translations, planning, and production control."
+
+    },
+    "experience2": {
+        "company": "Namaro SRL (Lima - Peru)",
+        "position": "Commercial Director",
+        "date": "April 2019 - October 2021",
+        "description1":"Definition of the company's commercial strategy, focusing on digital marketing and social media",
+        "description2": "Design of business plans based on market analysis for business expansion",
+        "description3": "Management of relationships with business partners, clients, and suppliers."
+            
+    },
+    "experience3": {
+        "company": "Belia Trading Peru",
+        "position": "Commercial Executive",
+        "date": "April 2013 - March 2019",
+        "description1": "Responsible for the conceptualization and development of commercial products, with constant attention to the quality-price relationship required by the client, through the strategic search for suppliers, manufacturers, and distributors globally.",
+        "description2": "Development and management of long-term commercial relationships with suppliers, through evaluations and commercial visits for large-scale operations.",
+        "description3": "Preparation, execution, and monitoring of the annual forecast, with continuous support for monthly and annual sales prospecting, based on the type and life cycle of the product or service"
     }
+    
 }
