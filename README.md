@@ -4,7 +4,7 @@
 ![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-38B2AC?logo=tailwindcss&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)
 
-![Mi imagen](portfolio/public/images/portfolio.webp)
+![Mi imagen](public/images/portfolio.webp)
 
 
 
