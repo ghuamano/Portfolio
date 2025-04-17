@@ -6,9 +6,7 @@
 
 ![Mi imagen](portfolio/public/images/portfolio.webp)
 
-```sh
-npm create astro@latest -- --template basics
-```
+
 
 Descripción
 Un portfolio web profesional y moderno desarrollado con Astro y Tailwind CSS. Este proyecto presenta una interfaz intuitiva y responsiva que exhibe mis proyectos, experiencia y habilidades profesionales.
