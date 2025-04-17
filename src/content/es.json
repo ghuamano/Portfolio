@@ -4,6 +4,7 @@
     "metaDescription": "Guillermo Huaman, un Desarrollador Web FullStack especializado en backEnd, con experiencia en la creación de aplicaciones y soluciones únicas.",
     "greeting": "Hola, soy Guille",
     "availability": "En busca de nuevos desafíos",
+    "contactMe": "Contáctame",
     "bio": {
         "profession": "🎓 Ingeniero industrial reconvertido en entusiasta del código, con una pasión imparable por el desarrollo web. Tras sumergirme de lleno en un bootcamp de desarrollo full-stack, salí equipado con ",
         "role": "FullStack Web Developer",
@@ -13,7 +14,8 @@
     },
     "sections": {
         "experience": "Experiencia laboral",
-        "contact": "Contacto"
+        "contact": "Contacto",
+        "projects": "Proyectos"
     },
     "nav": {
         "home": "Inicio",
@@ -46,5 +48,19 @@
         "description1": "Responsable de la conceptualización y desarrollo de productos comerciales, con atención constante a la relación calidad-precio requerida por el cliente, a través de la búsqueda estratégica de proveedores, fabricantes y distribuidores a nivel global.",
         "description2": "Desarrollo y gestión de relaciones comerciales a largo plazo con proveedores, mediante evaluaciones y visitas comerciales para operaciones a gran escala.",
         "description3": "Elaboración, ejecución y monitoreo del forecast anual, con apoyo continuo a la prospección de ventas mensuales y anuales, en función del tipo y ciclo de vida del producto o servicio."
+    },
+    "projects": {
+        "project1": {
+            "title": "Presto.it",
+            "description": "Plataforma de Anuncios Clasificados Presto es una moderna plataforma web de anuncios clasificados desarrollada con Laravel y Bootstrap."
+        },
+        "project2": {
+            "title": "Portfolio Personal",
+            "description": "Un portfolio web profesional y moderno desarrollado con Astro y Tailwind CSS. Este proyecto presenta una interfaz intuitiva y responsiva."
+        },
+        "project3": {
+            "title": "Aplicación Web de Reservas",
+            "description": "Desarrollo de una aplicación web para gestionar reservas en línea, utilizando JavaScript, HTML y CSS."
+        }
     }
 }

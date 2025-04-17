@@ -1,4 +1,5 @@
 ---
+import WorldIcon from "./Icons/World.astro";
 // Obtenemos la URL actual y el idioma actual
 const currentLocale = Astro.currentLocale || "es";
 
@@ -14,27 +15,21 @@ function getLocalizedPath(targetLocale: string): string {
 }
 ---
 
-<div class="relative inline-block text-left justify-self-end">
+<div class="relative inline-block text-left justify-self-end ps-0">
     <div>
         <button
+        transition:persist
             type="button"
-            class="dropdown-button inline-flex w-full justify-center gap-x-1.5 rounded-md px-3 py-2 text-sm font-semibold text-white shadow-xs ring-1 ring-gray-300 ring-inset"
+            class="dropdown-button inline-flex w-full justify-center gap-x-1.5  ps-10 pe-0 py-2 text-sm font-semibold align-bottom  "
             id="menu-button"
             aria-expanded="true"
             aria-haspopup="true"
-        >
-            {
-                currentLocale === "es"
-                    ? "🇪🇸 ES"
-                    : currentLocale === "en"
-                    ? "🇬🇧 EN"
-                    : currentLocale === "it"
-                        ? "🇮🇹 IT"
-                        : "🇪🇸 ES"
-            }
+        > <WorldIcon/>
+            
         </button>
         <div
-            class="dropdown-content absolute right-0 z-10 mt-2 w-52 origin-top-right rounded-md bg-violet-950 shadow-lg ring-1 ring-black/5 focus:outline-hidden"
+        transition:persist
+            class="dropdown-content absolute hidden scale-80 top-8 right-0 text-sm p-1 min-w-[8rem] rounded-md border border-gray-100 bg-white/90 dark:bg-gray-900/90 dark:border-gray-500/20 shadow-[0_3px_10px_rgb(0,0,0,0.2)] backdrop-blur-md "
             role="menu"
             aria-orientation="vertical"
             aria-labelledby="menu-button"
@@ -43,7 +38,7 @@ function getLocalizedPath(targetLocale: string): string {
             <div class="py-1" role="none">
                 <a
                     href={getLocalizedPath("es")}
-                    class={currentLocale === "es" ? "active" : ""}
+                    class={currentLocale === "es" ? "active" : "px-2 py-1.5 cursor-default hover:bg-neutral-400/40 dark:hover:bg-gray-500/50 rounded-sm"}
                 >
                     🇪🇸 ES
                 </a>
@@ -64,28 +59,38 @@ function getLocalizedPath(targetLocale: string): string {
         </div>
     </div>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
+    <script is:inline>
+        // Execute immediately without waiting for DOMContentLoaded
+        // This ensures it works after navigation/language changes
+        const setupDropdown = () => {
             const dropdownButton = document.querySelector(".dropdown-button");
             const dropdownContent = document.querySelector(".dropdown-content");
 
             if (dropdownButton && dropdownContent) {
-                dropdownButton.addEventListener("click", () => {
+                // Remove existing event listeners if any
+                const newButton = dropdownButton.cloneNode(true);
+                dropdownButton.parentNode.replaceChild(newButton, dropdownButton);
+                
+                // Add event listeners
+                newButton.addEventListener("click", (e) => {
+                    e.stopPropagation();
                     dropdownContent.classList.toggle("show");
                 });
 
-                window.addEventListener("click", (event) => {
+                document.addEventListener("click", (event) => {
                     if (
                         event.target instanceof Element &&
                         !event.target.matches(".dropdown-button")
                     ) {
-                        if (dropdownContent.classList.contains("show")) {
-                            dropdownContent.classList.remove("show");
-                        }
+                        dropdownContent.classList.remove("show");
                     }
                 });
             }
-        });
+        };
+
+        // Run setup immediately and after any dynamic navigation
+        setupDropdown();
+        document.addEventListener("astro:page-load", setupDropdown);
     </script>
 
     <style>
@@ -94,13 +99,13 @@ function getLocalizedPath(targetLocale: string): string {
             gap: 1rem;
         }
         .language-switcher a {
-            padding: 0.3rem 0.6rem;
+            padding: 0.1rem 0.6rem;
             border-radius: 0.25rem;
             text-decoration: none;
         }
         .language-switcher a.active {
             font-weight: bold;
-            background-color: rgba(255, 255, 255, 0.1);
+            background-color: rgba(255, 255, 255, 0.078);
         }
         
         /* Hide dropdown by default */
@@ -116,13 +121,13 @@ function getLocalizedPath(targetLocale: string): string {
         /* Style the links in dropdown */
         .dropdown-content a {
             display: block;
-            padding: 0.5rem 1rem;
-            color: #f4efef;
+            padding: 0.3rem 1rem;
+            
         }
         
         .dropdown-content a:hover {
-            background-color: #f5f5f5;
-            color: black;
+            background-color: #a1a1a15f;
+            
         }
     </style>
 </div>

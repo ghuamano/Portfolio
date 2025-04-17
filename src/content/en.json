@@ -4,6 +4,7 @@
     "metaDescription": "Guillermo Huaman, a FullStack Web Developer specialized in backEnd, with experience in creating unique applications and solutions",
     "greeting": "Hey, I'm Guille",
     "availability": "Seeking new opportunities",
+    "contactMe": "Contact Me",
     "bio": {
         "profession": "🎓 Industrial engineer turned code enthusiast with an unstoppable passion for web development. After diving headfirst into a full-stack web development bootcamp, I came out equipped with ",
         "role": "FullStack Web Developer",
@@ -13,11 +14,12 @@
     },
     "sections": {
         "experience": "Work Experience",
-        "contact": "Contact"
+        "contact": "Contact",
+        "projects": "Projects"
     },
     "nav": {
         "home": "Home",
-        "about": "About",
+        "about": "About Me",
         "experience": "Experience",
         "projects": "Projects",
         "contact": "Contact"
@@ -47,6 +49,20 @@
         "description1": "Responsible for the conceptualization and development of commercial products, with constant attention to the quality-price relationship required by the client, through the strategic search for suppliers, manufacturers, and distributors globally.",
         "description2": "Development and management of long-term commercial relationships with suppliers, through evaluations and commercial visits for large-scale operations.",
         "description3": "Preparation, execution, and monitoring of the annual forecast, with continuous support for monthly and annual sales prospecting, based on the type and life cycle of the product or service"
+    },
+    "projects": {
+        "project1": {
+            "title": "Presto.it",
+            "description": "Classified Ads Platform. Presto is a modern web platform for classified ads developed with Laravel & Bootstrap."
+        },
+        "project2": {
+            "title": "Personal Portfolio",
+            "description": "A professional and modern web portfolio developed with Astro and Tailwind CSS. This project features an intuitive and responsive interface."
+        },
+        "project3": {
+            "title": "Web Booking Application",
+            "description": "Development of a web application to manage online bookings, using JavaScript, HTML and CSS."
+        }
     }
     
 }

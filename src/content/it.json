@@ -4,6 +4,7 @@
     "metaDescription": "Guillermo Huaman, uno Sviluppatore Web FullStack specializzato in backEnd e frontEnd, con esperienza nella creazione di applicazioni e soluzioni uniche",
     "greeting": "Ciao, sono Guille",
     "availability": "Alla ricerca di nuove sfide",
+    "contactMe": "Contattami",
     "bio": {
         "profession": "🎓 Ingegnere industriale diventato appassionato di codice, con una passione incontenibile per lo sviluppo web. Dopo essermi tuffato in un bootcamp di sviluppo full-stack, ho acquisito ",
         "role": "FullStack Web Developer",
@@ -13,7 +14,8 @@
     },
     "sections": {
         "experience": "Esperienza lavorativa",
-        "contact": "Contatto"
+        "contact": "Contatto",
+        "projects": "Progetti"
     },
     "nav": {
         "home": "Home",
@@ -45,5 +47,20 @@
         "description1":"Responsabile della concettualizzazione e dello sviluppo di prodotti commerciali, con un’attenzione costante al rapporto qualità-prezzo richiesto dal cliente, attraverso la ricerca strategica di fornitori, produttori e distributori a livello globale.",
         "description2": "Sviluppo e gestione di relazioni commerciali a lungo termine con fornitori, mediante valutazioni e visite commerciali per operazioni su larga scala.",
         "description3": "Elaborazione, esecuzione e monitoraggio del forecast annuale, con supporto continuo alla prospezione delle vendite mensili e annuali, in funzione del tipo e del ciclo di vita del prodotto o servizio."
+    },
+    "projects": {
+        "project1": {
+            "title": "Presto.it",
+            "description": "Piattaforma di Annunci Classificati. Presto è una moderna piattaforma web per annunci classificati sviluppata con Laravel e Bootstrap."
+        },
+        "project2": {
+            "title": "Portfolio Personale",
+            "description": "Un portfolio web professionale e moderno sviluppato con Astro e Tailwind CSS. Questo progetto presenta un'interfaccia intuitiva e responsive."
+        },
+        "project3": {
+            "title": "Applicazione Web di Prenotazione",
+            "description": "Sviluppo di un'applicazione web per gestire prenotazioni online, utilizzando JavaScript, HTML e CSS."
+        }
     }
+    
 }

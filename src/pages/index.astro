@@ -3,14 +3,20 @@ import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
 import Footer from "../components/Footer.astro";
 import SectionContainer from "../components/SectionContainer.astro";
+import AboutMe from "../components/AboutMe.astro";
+import Projects from "../components/Projects.astro";
 import Badge from "../components/Badge.astro";
 import GitHubIcon from "../components/Icons/GitHub.astro";
 import LinkedInIcon from "../components/Icons/LinkedIn.astro";
 import EmailIcon from "../components/Icons/Email.astro";
 import BriefCaseIcon from "../components/Icons/BriefCase.astro";
+import ProfileCheck from "../components/Icons/ProfileCheck.astro";
+import CodeIcon from "../components/Icons/Code.astro";
 import SocialPill from "../components/SocialPill.astro";
 import Experience from "../components/Experience.astro";
 import LanguageSelector from "../components/LanguageSelector.astro";
+import TitleSection from "../components/TitleSection.astro";
+import Hero from "../components/Hero.astro";
 
 // Importamos la utilidad para traducciones
 import { getContent } from "../utils/translations";
@@ -24,16 +30,19 @@ const content = getContent(currentLocale);
     title={`${content.title} - ${content.description}`}
     description={content.metaDescription}
 >
-    <main>
-        <!-- Selector de idioma -->
-        <!-- <div class="flex justify-end pt-4 px-4"> -->
-        <!-- <LanguageSelector /> -->
-        <!-- </div> -->
-
+    <main class="px-4 mt-20 md:mt-5">
         <!-- Presentation -->
-        <SectionContainer id="#">
-            <img class="rounded-full size-16" src="/public/photoProfilo.png" alt="Guille photo" />
-            <h1 class="text-5xl font-bold flex flex-row gap-x-4 pb-1">
+        <SectionContainer class="pb-14 md:py-36">
+            <Hero>
+                <slot />
+            </Hero>
+
+            <!-- <img
+                class="rounded-full size-16 mt-32"
+                src="/public/photoProfilo2.png"
+                alt="Guille"
+            />
+            <h1 class="text-5xl font-bold flex flex-row gap-x-4 pb-1 pt-2 ">
                 {content.greeting}
                 <a
                     href="https://linkedin.com/in/ghuamano"
@@ -56,7 +65,7 @@ const content = getContent(currentLocale);
                 {content.bio.specialty}
             </h3>
 
-            <div class="flex gap-x-4 my-8" id="contact">
+            <div class="flex gap-x-4 my-20 justify-center" id="contact">
                 <SocialPill href="https://www.linkedin.com/in/ghuamano/">
                     <LinkedInIcon class="size-6" />
                     LinkedIn
@@ -71,47 +80,40 @@ const content = getContent(currentLocale);
                     <EmailIcon class="size-6" />
                     g.huaman.o@gmail.com
                 </SocialPill>
-            </div>
+            </div> -->
         </SectionContainer>
 
-        <Footer />
+        <!-- Projects -->
+
+        <SectionContainer id="projects" class="pb-10">
+            <div class="space-y-24">
+                <!-- <h2 class="text-2xl font-semibold mb-6 flex gap-x-5 items-center"> -->
+                <TitleSection>
+                    <CodeIcon class="size-7" />
+                    {content.sections.projects}
+                </TitleSection>
+                <Projects />
+            </div>
+        </SectionContainer>
 
         <!-- Experience -->
 
-        <section id="experience">
-            <SectionContainer>
-                <h2
-                    class="text-2xl font-semibold mb-6 flex gap-x-3 items-center"
-                >
-                    <BriefCaseIcon class="size-7" />
-                    {content.sections.experience}
-                </h2>
-                <Experience />
-            </SectionContainer>
-        </section>
-
-        <!-- Projects -->
-        <SectionContainer id="projects">
-            <h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+        <SectionContainer id="experience" class="py-16">
+            <TitleSection>
                 <BriefCaseIcon class="size-7" />
-            </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                <Card
-                    title="Project 1"
-                    body="Description of project 1"
-                    href="#"
-                />
-                <Card
-                    title="Project 2"
-                    body="Description of project 2"
-                    href="#"
-                />
-                <Card
-                    title="Project 3"
-                    body="Description of project 3"
-                    href="#"
-                />
-            </div>
+                {content.sections.experience}
+            </TitleSection>
+            <Experience />
         </SectionContainer>
+        <!-- About Me -->
+        <SectionContainer id="about-me">
+            <TitleSection>
+                <ProfileCheck class="size-8" />
+                {content.nav.about}
+            </TitleSection>
+            <AboutMe />
+        </SectionContainer>
+
+        
     </main>
 </Layout>

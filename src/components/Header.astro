@@ -1,65 +1,128 @@
 ---
-export interface Props {
-    link?: string;
-}
-
 import LanguageSelector from "./LanguageSelector.astro";
 import { getContent } from "../utils/translations";
 // Obtenemos el idioma actual usando la función nativa de Astro
 const currentLocale = Astro.currentLocale || "es";
 const content = getContent(currentLocale);
+import ThemeToggle from "./ThemeToggle.astro";
 
+const navItems = [
+    {
+        title: content.nav.projects,
+        label: content.nav.projects,
+        url: "/#projects",
+    },
+    {
+        title: content.nav.experience,
+        label: content.nav.experience,
+        url: "/#experience",
+    },
+
+    {
+        title: content.nav.about,
+        label: content.nav.about,
+        url: "/#about-me",
+    },
+    {
+        title: content.nav.contact,
+        label: content.nav.contact,
+        url: "mailto:g.huaman.o@gmail.com",
+    },
+];
 ---
+<header
+    class="fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-2 px-2"
+>
+    <nav
+        class="flex flex-col md:flex-row px-3 md:px-4 text-sm font-medium rounded-full text-gray-600 dark:text-gray-200 items-center w-full md:max-w-xl lg:max-w-2xl"
+    >
+        <div class="flex flex-nowrap justify-center w-full md:justify-start overflow-x-auto px-1 py-1 mx-auto md:mx-0">
+            {
+                navItems.map((link) => (
+                    <a
+                        class="relative px-3 md:px-2 py-2 whitespace-nowrap transition hover:text-blue-500 dark:hover:text-blue-500"
+                        aria-label={link.label}
+                        href={link.url}
+                    >
+                        {link.title}
+                    </a>
+                ))
+            }
+        </div>
 
-<header class="container flex py-5 w-full mx-auto mb-40">
-    <nav class="w-full flex justify-between items-center">
-        <div class="flex-1">
-            <!-- Empty div for balance -->
-        </div>
-        
-        <!-- Desktop Menu -->
-        <ul class="hidden md:flex gap-x-10 list-none opacity-90">
-            <li><a href="#">{content.nav.home}</a></li>
-            <li><a href="#nav">{content.nav.about}</a></li>
-            <li><a href="#experience">{content.nav.experience}</a></li>
-            <li><a href="#projects">{content.nav.projects}</a></li>
-            <li><a href="#contact">{content.nav.contact}</a></li>
-        </ul>
-        
-        <!-- Mobile Hamburger Button -->
-        <button id="mobile-menu-button" class="md:hidden z-20">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-        </button>
-        
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="fixed inset-0 bg-black bg-opacity-80 z-10 flex-col items-center justify-center hidden">
-            <ul class="flex flex-col gap-y-6 text-center text-xl">
-                <li><a href="#">{content.nav.home}</a></li>
-                <li><a href="about-me">{content.nav.about}</a></li>
-                <li><a href="#experience">{content.nav.experience}</a></li>
-                <li><a href="#projects">{content.nav.projects}</a></li>
-                <li><a href="#contact">{content.nav.contact}</a></li>
-            </ul>
-        </div>
-        
-        <div class="flex-1 flex justify-end mx-auto pe-6">
-            <LanguageSelector />
+        <div class="flex items-center space-x-2 mt-1 md:mt-0 mx-auto md:mx-0">
+            <div class="flex-shrink-0">
+                <ThemeToggle />
+            </div>
+
+            <div class="flex-shrink-0">
+                <LanguageSelector />
+            </div>
         </div>
     </nav>
+</header>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const mobileMenuButton = document.getElementById('mobile-menu-button');
-            const mobileMenu = document.getElementById('mobile-menu');
-            
-            if (mobileMenuButton && mobileMenu) {
-                mobileMenuButton.addEventListener('click', () => {
-                    mobileMenu.classList.toggle('hidden');
-                    mobileMenu.classList.toggle('flex');
+<script>
+    document.addEventListener("astro:page-load", () => {
+        const sections = document.querySelectorAll("section");
+        const navItems = document.querySelectorAll("header nav a");
+
+        const callback = (entries: any[]) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    navItems.forEach((item) => {
+                        if (
+                            item.getAttribute("aria-label") == entry.target.id
+                        ) {
+                            item.classList.add("text-blue-500");
+                        } else {
+                            item.classList.remove("text-blue-500");
+                        }
+                    });
+                }
+            });
+        };
+
+        const observer = new IntersectionObserver(callback, {
+            root: null,
+            rootMargin: "0px",
+            threshold: 0.3,
+        });
+
+        sections.forEach((section) => {
+            observer.observe(section);
+        });
+
+        // Cleanup function
+        document.onvisibilitychange = () => {
+            if (document.visibilityState === "hidden") {
+                observer.disconnect();
+            } else {
+                sections.forEach((section) => {
+                    observer.observe(section);
                 });
             }
-        });
-    </script>
-</header>
+        };
+    });
+</script>
+
+<style>
+    nav {
+        animation: nav-shadown 1s linear both;
+        animation-timeline: scroll();
+        animation-range: 0 100px;
+    }
+
+    nav {
+        @apply dark:bg-gray-800/90 bg-white/50;
+    }
+
+    @keyframes nav-shadown {
+        0% {
+            @apply dark:bg-gray-800/0 bg-white/0;
+        }
+        to {
+            @apply shadow-lg ring-1 backdrop-blur ring-white/10;
+        }
+    }
+</style>

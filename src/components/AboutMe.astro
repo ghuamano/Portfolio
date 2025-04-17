@@ -1,0 +1,40 @@
+---
+const personalImageAlt = "Guillermo Huaman";
+---
+
+<article
+    class="flex flex-col items-center justify-center gap-8 text-gray-700 dark:text-gray-300 md:flex-row"
+>
+    <div
+        class="[&>p]:mb-4 [&>p>strong]:text-yellow-200 dark:[&>p>strong]:text-yellow-100 [&>p>strong]:font-normal [&>p>strong]:font-mono text-pretty order-2 md:order-1"
+    >
+        <p>
+            👋 Me llamo Guillermo Huaman, pero los amigos (y el código) me
+            llaman Guille. Aunque siempre tuve curiosidad por la tecnología, fue
+            programando un PLC Siemens LOGO! cuando descubrí que la programación
+            me apasionaba de verdad.
+        </p>
+
+        <p>
+            El destino me llevó a estudiar Ingeniería
+            Industrial, pero ahora estoy siguiendo mi verdadera vocación: el
+            desarrollo web.
+        </p>
+
+        <p>
+            Combino pensamiento lógico, visión estratégica y
+            muchas ganas de crear cosas increíbles. 🚀💻
+        </p>
+    </div>
+
+    <img
+        width="200"
+        height="200"
+        src="/me.png"
+        alt={personalImageAlt}
+        class="order-1 object-cover w-64 h-full p-1 md:order-2 rotate-3 lg:p-2 lg:w-64 aspect-square rounded-2xl bg-black/20 dark:bg-yellow-500/5 ring-1 ring-black/70 dark:ring-white/20"
+        style="object-position: 50% 50%"
+    />
+</article>
+
+
