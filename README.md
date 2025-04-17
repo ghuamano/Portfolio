@@ -29,28 +29,43 @@ Instalación
 Requisitos previos
 Node.js (versión 14 o superior)
 npm o yarn
+
+
 Clonar e instalar el proyecto
 # Clonar el repositorio
+```sh
 git clone https://github.com/ghuamano/Personal_Portfolio.git
+```
 
 # Navegar al directorio del proyecto
+```sh
 cd Personal_Portfolio
+```
 
 # Instalar dependencias
+```sh
 npm install
+```
 # o si usas yarn
 yarn install
 
 # Iniciar servidor de desarrollo
+```sh
 npm run dev
+```
 # o con yarn
+```sh
 yarn dev
+```
 
 Construir para producción
-
+```sh
 npm run build
+```
 # o con yarn
+```sh
 yarn build
+```
 
 Despliegue
 El portfolio está desplegado y accesible en:
