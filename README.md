@@ -13,13 +13,15 @@ Soporte multiidioma: Implementación completa de localización para español, in
 Modo oscuro/claro: Opciones de visualización que se adaptan a las preferencias del usuario
 Optimización de rendimiento: Construido con Astro para ofrecer un sitio web rápido y eficiente
 Secciones personalizadas: Presentación, proyectos, experiencia laboral y sobre mí
-Componentes reutilizables: Estructura modular para fácil mantenimiento
-Tecnologías
+Componentes reutilizables: Estructura modular para fácil mantenimiento.
+
+Tecnologías: 
 Astro
 Tailwind CSS
 JavaScript
 HTML
 CSS
+
 Estructura del Proyecto
 El sitio se organiza en componentes modulares que facilitan la actualización del contenido y el mantenimiento del código, con una implementación i18n para gestionar múltiples idiomas (ES/EN/IT).
 
@@ -28,20 +30,30 @@ Requisitos previos
 Node.js (versión 14 o superior)
 npm o yarn
 Clonar e instalar el proyecto
+# Clonar el repositorio
+git clone https://github.com/ghuamano/Personal_Portfolio.git
 
-## 🧞 Commands
+# Navegar al directorio del proyecto
+cd Personal_Portfolio
 
-All commands are run from the root of the project, from a terminal:
+# Instalar dependencias
+npm install
+# o si usas yarn
+yarn install
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+# Iniciar servidor de desarrollo
+npm run dev
+# o con yarn
+yarn dev
 
-## 👀 Want to learn more?
+Construir para producción
+
+npm run build
+# o con yarn
+yarn build
+
+Despliegue
+El portfolio está desplegado y accesible en:
+## 👀 [URL del sitio]
 
 
