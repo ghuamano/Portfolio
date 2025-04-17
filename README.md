@@ -1,15 +1,18 @@
 # Portfolio Personal
 
-![Mi imagen](assets/images/Portfolio.webp)
+![Astro](https://img.shields.io/badge/Astro-FF5D01?logo=astro&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-38B2AC?logo=tailwindcss&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)
+
+![Mi imagen](portfolio/public/images/portfolio.webp)
 
 ```sh
 npm create astro@latest -- --template basics
 ```
 
 Descripción
-Un portfolio web profesional y moderno desarrollado con Astro ![Astro](https://img.shields.io/badge/Astro-FF5D01?logo=astro&logoColor=white) y Tailwind CSS. Este proyecto presenta una interfaz intuitiva y responsiva que exhibe mis proyectos, experiencia y habilidades profesionales.
-![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?logo=typescript&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)
+Un portfolio web profesional y moderno desarrollado con Astro y Tailwind CSS. Este proyecto presenta una interfaz intuitiva y responsiva que exhibe mis proyectos, experiencia y habilidades profesionales.
+
 
 Características
 Diseño responsivo: Optimizado para cualquier dispositivo y tamaño de pantalla
