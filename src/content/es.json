@@ -5,6 +5,7 @@
     "greeting": "Hola, soy Guille",
     "availability": "En busca de nuevos desafíos",
     "contactMe": "Contáctame",
+    "more": "Saber más",
     "bio": {
         "profession": "🎓 Ingeniero industrial reconvertido en entusiasta del código, con una pasión imparable por el desarrollo web. Tras sumergirme de lleno en un bootcamp de desarrollo full-stack, salí equipado con ",
         "role": "FullStack Web Developer",
@@ -28,11 +29,10 @@
         "company": "Eudinamis",
         "position": "Jefe de Departamento de Producción",
         "date": "2021 - Presente",
-        "description1":"Montaje y desmontaje de maquinaria industrial.",
+        "description1": "Montaje y desmontaje de maquinaria industrial.",
         "description2": "Control de procesos productivos y gestión de calidad.",
         "description3": "Soporte administrativo en traducciones, planificación y control de producción."
     },
-
     "experience2": {
         "company": "Namaro SRL (Lima - Perú)",
         "position": "Director Comercial",
@@ -62,5 +62,27 @@
             "title": "Aplicación Web de Reservas",
             "description": "Desarrollo de una aplicación web para gestionar reservas en línea, utilizando JavaScript, HTML y CSS."
         }
+    },
+    
+    "about": {
+        "intro": "¡Hola! Soy Guillermo Huaman, aunque para todos (¡y hasta para mis proyectos!) soy simplemente ",
+        "nickname": "Guille",
+        "intro2": ". Siempre sentí una afinidad por la tecnología, pero fue durante mis estudios en ",
+        "electronic": "Electrónica",
+        "intro3": " que, al programar un ",
+        "plc": "PLC Siemens LOGO!",
+        "intro4": ", descubrí lo mucho que disfrutaba resolver problemas con lógica y creatividad.",
+        "middle": "Con más de ",
+        "years": "10 años de experiencia profesional ",
+        "middle2": "en entornos industriales y comerciales, me formé como ",
+        "engineering": "Ingeniero Industrial",
+        "middle3": ", desarrollando habilidades sólidas en gestión de proyectos, análisis de procesos, liderazgo de equipos y optimización de recursos. Esa trayectoria me enseñó a pensar en soluciones reales y eficientes, algo que ahora aplico también al desarrollo web.",
+        "end": "Tras completar el curso de ",
+        "bootcamp": "desarrollo web full-stack",
+        "end2": ", me lancé de lleno a este nuevo camino. Actualmente me estoy especializando en ",
+        "java": "Java",
+        "end3": " y profundizando en ",
+        "specialty": "arquitectura de software, buenas prácticas, principios SOLID y patrones de diseño.",
+        "end4": " Mi misión es combinar mis habilidades técnicas con mi experiencia para aportar valor real en cada proyecto. Y como este viaje no termina nunca, siempre estoy listo para afrontar nuevos retos. ¿Creamos algo increíble juntos? 🚀"
     }
 }

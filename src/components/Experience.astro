@@ -15,21 +15,24 @@ const content = getContent(currentLocale);
 const EXPERIENCE = [
     {
         date: content.experience1.date,
-        title: content.experience1.position + ' | ' + content.experience1.company, 
-        description: content.experience1.description1,
+        title: content.experience1.position,
+        company: content.experience1.company, 
+        description: content.experience1.description1 + content.experience1.description2,
         link: '#',
 
     },
     {
         date: content.experience2.date,
-        title: content.experience2.position + ' | ' + content.experience1.company, 
+        title: content.experience2.position,
+        company: content.experience2.company, 
         description: content.experience2.description1,
         link: '#',
 
     },
     {
         date: content.experience3.date,
-        title: content.experience3.position + ' | ' + content.experience1.company, 
+        title: content.experience3.position,
+        company: content.experience3.company, 
         description: content.experience3.description1,
         link: '#',
 
@@ -39,7 +42,7 @@ const EXPERIENCE = [
 <ol class="relative mt-16"> 
     {
         EXPERIENCE.map(experience => (
-            <li class="mb-10 ms-4">
+            <li class="">
                 <ExperienceItem {...experience}/>
             </li>
         ))

@@ -5,6 +5,7 @@
     "greeting": "Hey, I'm Guille",
     "availability": "Seeking new opportunities",
     "contactMe": "Contact Me",
+    "more": "Learn more",
     "bio": {
         "profession": "🎓 Industrial engineer turned code enthusiast with an unstoppable passion for web development. After diving headfirst into a full-stack web development bootcamp, I came out equipped with ",
         "role": "FullStack Web Developer",
@@ -31,16 +32,14 @@
         "description1": "Assembly and disassembly of industrial machinery.",
         "description2": "Control of production processes and quality management.",
         "description3": "Administrative support in translations, planning, and production control."
-
     },
     "experience2": {
         "company": "Namaro SRL (Lima - Peru)",
         "position": "Commercial Director",
         "date": "April 2019 - October 2021",
-        "description1":"Definition of the company's commercial strategy, focusing on digital marketing and social media",
+        "description1": "Definition of the company's commercial strategy, focusing on digital marketing and social media",
         "description2": "Design of business plans based on market analysis for business expansion",
         "description3": "Management of relationships with business partners, clients, and suppliers."
-            
     },
     "experience3": {
         "company": "Belia Trading Peru",
@@ -63,6 +62,26 @@
             "title": "Web Booking Application",
             "description": "Development of a web application to manage online bookings, using JavaScript, HTML and CSS."
         }
+    },
+    "about": {
+        "intro": "Hi! I'm Guillermo Huaman, but to everyone (yes, even my projects), I'm simply ",
+        "nickname": "Guille",
+        "intro2": ". I've always had a thing for technology, but it was during my studies in ",
+        "electronic": "Electronics",
+        "intro3": " when I started programming a ",
+        "plc": "Siemens LOGO! PLC",
+        "intro4": ", and I realized how much I enjoyed solving problems using logic and creativity.",
+        "middle": "With over ",
+        "years": "10 years of professional experience ",
+        "middle2": "in industrial and commercial environments, I pursued a career as an ",
+        "engineering": "Industrial Engineer",
+        "middle3": ", developing strong skills in project management, process analysis, team leadership, and resource optimization. That journey taught me how to think in terms of real, efficient solutions — something I now bring into the world of web development.",
+        "end": "After completing a ",
+        "bootcamp": "full-stack web development course",
+        "end2": ", I jumped fully into this new path. I'm currently specializing in ",
+        "java": "Java",
+        "end3": " and expanding my knowledge in ",
+        "specialty": "software architecture, clean code practices, SOLID principles, and design patterns.",
+        "end4": " My mission is to combine my technical skills with my experience to bring real value to every project. And since this journey never ends, I’m always ready for the next big challenge. Shall we build something amazing together? 🚀"
     }
-    
 }
