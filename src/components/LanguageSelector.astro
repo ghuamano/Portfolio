@@ -15,16 +15,26 @@ function getLocalizedPath(targetLocale: string): string {
 }
 ---
 
-<div class="relative inline-block text-left justify-self-end ps-0">
+<div class="relative inline-block text-left justify-self-center pr-4">
     <div>
         <button
-        transition:persist
+        
             type="button"
             class="dropdown-button inline-flex w-full justify-center gap-x-1.5  ps-10 pe-0 py-2 text-sm font-semibold align-bottom  "
             id="menu-button"
             aria-expanded="true"
             aria-haspopup="true"
-        > <WorldIcon/>
+        > {
+            currentLocale === "es"
+                ? "🇪🇸 ES"
+                : currentLocale === "en"
+                ? "🇬🇧 EN"
+                : currentLocale === "it"
+                    ? "🇮🇹 IT"
+                    : "🇪🇸 ES"
+        }
+            
+            <span class="sr-only">Open options</span>
             
         </button>
         <div

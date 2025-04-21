@@ -13,6 +13,10 @@
         "location": "Currently based in Rimini, Italy 🇮🇹.",
         "specialty": "🚀 Currently on a mission to break into the software development world, bringing a dynamic mix of technical chops and managerial superpowers to help your dev team shine. Let’s build something awesome together! 💻✨"
     },
+    "github": {
+        "portfolio": "https://github.com/ghuamano/Portfolio/blob/main/README.md"
+        
+    },
     "sections": {
         "experience": "Work Experience",
         "contact": "Contact",

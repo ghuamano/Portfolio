@@ -1,79 +1,77 @@
-# Portfolio Personal
+# Personal Portfolio
 
 ![Astro](https://img.shields.io/badge/Astro-FF5D01?logo=astro&logoColor=white)
 ![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-38B2AC?logo=tailwindcss&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)
 
-![Mi imagen](public/images/portfolio.webp)
+![My image](public/images/portfolio.webp)
 
 
 
-Descripción
-Un portfolio web profesional y moderno desarrollado con Astro y Tailwind CSS. Este proyecto presenta una interfaz intuitiva y responsiva que exhibe mis proyectos, experiencia y habilidades profesionales.
+# Description
+A modern and professional web portfolio developed with Astro and Tailwind CSS. This project features an intuitive and responsive interface that showcases my projects, experience, and professional skills.
 
 
-Características
-Diseño responsivo: Optimizado para cualquier dispositivo y tamaño de pantalla
-Soporte multiidioma: Implementación completa de localización para español, inglés e italiano
-Modo oscuro/claro: Opciones de visualización que se adaptan a las preferencias del usuario
-Optimización de rendimiento: Construido con Astro para ofrecer un sitio web rápido y eficiente
-Secciones personalizadas: Presentación, proyectos, experiencia laboral y sobre mí
-Componentes reutilizables: Estructura modular para fácil mantenimiento.
+# Features
+Responsive design: Optimized for any device and screen size
+Multilingual support: Complete localization implementation for Spanish, English, and Italian
+Dark/light mode: Display options that adapt to user preferences
+Performance optimization: Built with Astro to offer a fast and efficient website
+Custom sections: Presentation, projects, work experience, and about me
+Reusable components: Modular structure for easy maintenance.
 
-Tecnologías: 
+# Technologies: 
 Astro
 Tailwind CSS
 JavaScript
 HTML
 CSS
 
-Estructura del Proyecto
-El sitio se organiza en componentes modulares que facilitan la actualización del contenido y el mantenimiento del código, con una implementación i18n para gestionar múltiples idiomas (ES/EN/IT).
+# Project Structure
+The site is organized into modular components that facilitate content updates and code maintenance, with an i18n implementation to manage multiple languages (ES/EN/IT).
 
-Instalación
-Requisitos previos
-Node.js (versión 14 o superior)
-npm o yarn
+# Installation
+Prerequisites
+Node.js (version 14 or higher)
+npm or yarn
 
 
-Clonar e instalar el proyecto
-# Clonar el repositorio
+Clone and install the project
+# Clone the repository
 ```sh
 git clone https://github.com/ghuamano/Personal_Portfolio.git
 ```
 
-# Navegar al directorio del proyecto
+# Navigate to the project directory
 ```sh
 cd Personal_Portfolio
 ```
 
-# Instalar dependencias
+# Install dependencies
 ```sh
 npm install
 ```
-# o si usas yarn
+# or if you use yarn
 yarn install
 
-# Iniciar servidor de desarrollo
+# Start development server
 ```sh
 npm run dev
 ```
-# o con yarn
+# or with yarn
 ```sh
 yarn dev
 ```
 
-Construir para producción
+Build for production
 ```sh
 npm run build
 ```
-# o con yarn
+# or with yarn
 ```sh
 yarn build
 ```
 
-Despliegue
-El portfolio está desplegado y accesible en:
-## 👀 [URL del sitio]
-
-
+Deployment
+The portfolio is deployed and accessible at:
+## 👀 [(https://guillermo-huaman-dev.netlify.app/en/)]
