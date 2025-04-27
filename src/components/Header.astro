@@ -18,23 +18,23 @@ function getLocalizedUrl(path: string, locale: string): string {
 const navItems = [
     {
         title: content.nav.projects,
-        label: content.nav.projects,
+        label: "projects", 
         url: getLocalizedUrl("/#projects", currentLocale),
     },
     {
         title: content.nav.experience,
-        label: content.nav.experience,
+        label: "experience", 
         url: getLocalizedUrl("/#experience", currentLocale),
     },
     {
         title: content.nav.about,
-        label: content.nav.about,
+        label: "about-me", 
         url: getLocalizedUrl("/#about-me", currentLocale),
     },
     {
         title: content.nav.contact,
-        label: content.nav.contact,
-        url: "mailto:g.huaman.o@gmail.com", // Email links don't need localization
+        label: "contact",
+        url: "mailto:g.huaman.o@gmail.com",
     },
 ];
 ---
