@@ -6,6 +6,7 @@
     "availability": "En busca de nuevos desafíos",
     "contactMe": "Contáctame",
     "more": "Saber más",
+    "linkedIn": "https://www.linkedin.com/in/ghuamano",
     "bio": {
         "profession": "🎓 Ingeniero industrial reconvertido en entusiasta del código, con una pasión imparable por el desarrollo web. Tras sumergirme de lleno en un bootcamp de desarrollo full-stack, salí equipado con ",
         "role": "FullStack Web Developer",
@@ -34,8 +35,8 @@
         "company": "Eudinamis",
         "position": "Jefe de Departamento de Producción",
         "date": "2021 - Presente",
-        "description1": "Montaje y desmontaje de maquinaria industrial.",
-        "description2": "Control de procesos productivos y gestión de calidad.",
+        "description1": "Montaje y desmontaje de maquinaria industrial. ",
+        "description2": " Control de procesos productivos y gestión de calidad.",
         "description3": "Soporte administrativo en traducciones, planificación y control de producción."
     },
     "experience2": {

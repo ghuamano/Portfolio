@@ -6,27 +6,35 @@ const currentLocale = Astro.currentLocale || "es";
 const content = getContent(currentLocale);
 import ThemeToggle from "./ThemeToggle.astro";
 
+// Create a function to generate localized URLs
+function getLocalizedUrl(path: string, locale: string): string {
+    if (locale === "es") {
+        return path; // Default language uses root paths
+    }
+    // For other languages, prepend the locale
+    return `/${locale}${path}`;
+}
+
 const navItems = [
     {
         title: content.nav.projects,
         label: content.nav.projects,
-        url: "/#projects",
+        url: getLocalizedUrl("/#projects", currentLocale),
     },
     {
         title: content.nav.experience,
         label: content.nav.experience,
-        url: "/#experience",
+        url: getLocalizedUrl("/#experience", currentLocale),
     },
-
     {
         title: content.nav.about,
         label: content.nav.about,
-        url: "/#about-me",
+        url: getLocalizedUrl("/#about-me", currentLocale),
     },
     {
         title: content.nav.contact,
         label: content.nav.contact,
-        url: "mailto:g.huaman.o@gmail.com",
+        url: "mailto:g.huaman.o@gmail.com", // Email links don't need localization
     },
 ];
 ---

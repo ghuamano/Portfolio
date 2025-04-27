@@ -7,6 +7,15 @@ const currentLocale = Astro.currentLocale || "es";
 const content = getContent(currentLocale);
 // Obtenemos el año actual
 const currentYear = new Date().getFullYear();
+
+// Create a function to generate localized URLs (same as in Header)
+function getLocalizedUrl(path: string, locale: string): string {
+    if (locale === "es") {
+        return path; // Default language uses root paths
+    }
+    // For other languages, prepend the locale
+    return `/${locale}${path}`;
+}
 ---
 
 <footer
@@ -18,14 +27,14 @@ const currentYear = new Date().getFullYear();
         <span
             class="text-sm sm:text-center text-zinc-800/90 dark:text-zinc-200/90"
             >© {currentYear}
-            <a href="#" class="hover:underline">Guille Huaman</a>.
+            <a href={getLocalizedUrl("/", currentLocale)} class="hover:underline">Guille Huaman</a>.
             
         </span>
         <ul
             class="flex flex-wrap items-center mt-3 text-sm font-medium dark:text-white/90 sm:mt-0"
         >
             <li>
-                <a href="/#sobre-mi" class="hover:underline me-4 md:me-6"
+                <a href={getLocalizedUrl("/#about-me", currentLocale)} class="hover:underline me-4 md:me-6"
                     >{content.nav.about}</a
                 >
             </li>

@@ -6,6 +6,7 @@
     "availability": "Seeking new opportunities",
     "contactMe": "Contact Me",
     "more": "Learn more",
+    "linkedIn": "https://www.linkedin.com/in/ghuamano",
     "bio": {
         "profession": "🎓 Industrial engineer turned code enthusiast with an unstoppable passion for web development. After diving headfirst into a full-stack web development bootcamp, I came out equipped with ",
         "role": "FullStack Web Developer",
@@ -34,7 +35,7 @@
         "company": "Eudinamis",
         "position": "Production Department Manager",
         "date": "2021 - Present",
-        "description1": "Assembly and disassembly of industrial machinery.",
+        "description1": "Assembly and disassembly of industrial machinery. ",
         "description2": "Control of production processes and quality management.",
         "description3": "Administrative support in translations, planning, and production control."
     },
