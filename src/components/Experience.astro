@@ -1,7 +1,7 @@
 ---
-import { date, string } from "astro:schema"
-import ExperienceItem from "./ExperienceItem.astro"
-import type { ACTION_ERROR_CODES } from "astro:actions"
+import { date, string } from "astro:schema";
+import ExperienceItem from "./ExperienceItem.astro";
+import type { ACTION_ERROR_CODES } from "astro:actions";
 
 import LanguageSelector from "../components/LanguageSelector.astro";
 
@@ -9,44 +9,82 @@ import LanguageSelector from "../components/LanguageSelector.astro";
 import { getContent } from "../utils/translations";
 
 // Obtenemos el idioma actual usando la función nativa de Astro
-const currentLocale = Astro.currentLocale || 'es';
+const currentLocale = Astro.currentLocale || "es";
 const content = getContent(currentLocale);
 
 const EXPERIENCE = [
     {
         date: content.experience1.date,
         title: content.experience1.position,
-        company: content.experience1.company, 
-        description: content.experience1.description1 + content.experience1.description2,
-        link: '#',
-
+        company: content.experience1.company,
+        description:
+            content.experience1.description1 + content.experience1.description2,
+        link: content.linkedIn,
+        target: "_blank",
+        rel: "noopener noreferrer",
     },
     {
         date: content.experience2.date,
         title: content.experience2.position,
-        company: content.experience2.company, 
+        company: content.experience2.company,
         description: content.experience2.description1,
-        link: '#',
-
+        link: content.linkedIn,
+        target: "_blank",
+        rel: "noopener noreferrer",
     },
     {
         date: content.experience3.date,
         title: content.experience3.position,
-        company: content.experience3.company, 
+        company: content.experience3.company,
         description: content.experience3.description1,
-        link: '#',
-
-    }
-]  
+        link: content.linkedIn,
+        target: "_blank",
+        rel: "noopener noreferrer",
+    },
+];
 ---
-<ol class="relative mt-16"> 
+
+<ol class="relative mt-16">
     {
-        EXPERIENCE.map(experience => (
-            <li class="">
-                <ExperienceItem {...experience}/>
+        EXPERIENCE.map((experience) => (
+            <li class="experience-item-wrapper" data-link={experience.link}>
+                <ExperienceItem {...experience} />
             </li>
         ))
-    }                 
-
+    }
 </ol>
 
+<script>
+    document.addEventListener("astro:page-load", () => {
+        document
+            .querySelectorAll(".experience-item-wrapper")
+            .forEach((item) => {
+                item.addEventListener("click", (event) => {
+                    // Prevent default browser navigation
+                    event.preventDefault();
+
+                    const link = item.getAttribute("data-link");
+                    if (link) {
+                        window.open(link, "_blank", "noopener,noreferrer");
+                    }
+
+                    // Stop event propagation to prevent any parent elements from handling it
+                    event.stopPropagation();
+
+                    // Return false as an extra measure to prevent default behavior
+                    return false;
+                });
+            });
+    });
+</script>
+
+<style>
+    .experience-item-wrapper {
+        cursor: pointer;
+        transition: transform 0.2s ease;
+    }
+
+    .experience-item-wrapper:hover {
+        transform: scale(1.01);
+    }
+</style>
